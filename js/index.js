@@ -27,10 +27,37 @@ $('.slider').slick({
     ]
   });
 
-// $(".vertical-slider").slick({
-//     dots: true,
-//     vertical: true,
-//     centerMode: true,
-//     slidesToShow: 1,
-//     slidesToScroll: 1
-// });
+//Nav efecto:
+let header = document.getElementById('header');
+
+// Función para controlar el scroll
+function handleScroll() {
+  let scrollY = window.scrollY;
+
+  if (scrollY == 0) {
+    header.classList.remove("active");
+  } else {
+    header.classList.add("active");
+  }
+}
+window.addEventListener('scroll', handleScroll);
+
+
+//Cuando se clickea en el icono de busqueda, se abre el input
+let searchIcon = document.getElementById('search-icon');
+let searchInput = document.getElementById('search-input');
+
+searchIcon.addEventListener('click', () => {
+    searchIcon.classList.toggle('expandir');
+    searchInput.classList.toggle('active');
+    if (searchInput.classList.contains('active')) {
+        searchInput.focus();
+    }
+});
+
+document.addEventListener('click', (event) => {
+    if (!searchInput.contains(event.target) && !searchIcon.contains(event.target)) {
+        searchIcon.classList.remove('expanded');
+        searchInput.classList.remove('active');
+    }
+});
