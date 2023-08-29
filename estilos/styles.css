@@ -1,0 +1,209 @@
+:root {
+    --bg-color-dark: #141414;
+}
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-dark);
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 10px 0;
+}
+
+nav img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hero section */
+.hero {
+    /* background-image: url('hero-background.jpg'); */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contenedor-titulo-seccion {
+    
+}
+/* Top 10 */
+/* Carousel container */
+.slick-prev{
+    z-index: 1;
+    left: 10px;
+    position: absolute;
+    margin: auto;
+}
+.slick-next {
+    right: 10px;
+}
+.slick-initialized .slick-slide {
+    display: flex;
+}
+.slider {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 20vh;
+}
+.slick-list {
+    height:max-content;
+}
+
+.cont-car {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}  
+.icon-container {
+display: flex;
+}
+.image-container {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+width: 100%;
+height: 100%;
+object-fit:cover;
+}
+
+@media only screen and (min-width: 650px) {
+    .slider {
+        padding-left: 50px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+     .cont-car {
+        margin-right: 30px;
+    }   
+    .icon-container {
+        position: relative;
+        left: 7px;
+    } 
+    .slick-list {
+        max-width: 100%; /* Ajusta esto según tus necesidades */
+        overflow: hidden;
+      }
+      
+    
+}
+
+  
+  
+  
+
+/* ------------------- */
+/* Featured section */
+.featured {
+    /* Placeholder styling for featured content */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.featured-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.featured-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Genre section */
+.genre {
+    /* Placeholder styling for genre-specific content */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.genre-item {
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+}
+
+.genre-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Carousel container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Number on the left */
+.carousel-number {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Content on the right */
+.carousel-content {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Movie card */
+.movie-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-card h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.movie-card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+}
