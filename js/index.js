@@ -1,4 +1,4 @@
-$('.slider').slick({
+$('.slider, .sliderSinNumero').slick({
     slidesToShow: 6,
     slidesToScroll: 4,
     autoplay: false,

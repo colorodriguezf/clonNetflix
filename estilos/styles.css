@@ -60,10 +60,18 @@ nav ul {
     font-weight: 00;
 }
 nav ul li:hover {
+    cursor: pointer;
     color:#e5e5e5;
+}
+.contenedor-img-profile-icon {
+    cursor: pointer;
 }
 dl, ol, ul { 
     margin:0;
+}
+
+nav a:hover {
+    cursor: pointer;
 }
 
 /* Parte derecha del nav */
@@ -90,6 +98,10 @@ dl, ol, ul {
     margin-left: 2px;
     transition: transform 367ms cubic-bezier(.21,0,.07,1);
     width: 0;
+}
+/* al hacer hover en el perfil, la flecha rota 180 y queda hacia arriba */
+.contenedor-img-profile-icon:hover .profile-icon-button {
+    transform: rotate(180deg);
 }
 
 .search-container {
@@ -139,7 +151,7 @@ dl, ol, ul {
 /* Hero section */
 .hero {
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     margin: 0;
     padding: 0;
     position: relative;
@@ -150,6 +162,7 @@ dl, ol, ul {
     height: 100vh; 
     object-fit: cover; 
     object-position: center; 
+    position: relative;
   }
   .titulo-img {
     bottom: 30%;
@@ -160,7 +173,6 @@ dl, ol, ul {
     position: absolute;
     top: 0;
     width: 36%;
-    z-index: 10;
 }
 .titulo-img img {
     width: 100%;
@@ -192,11 +204,49 @@ dl, ol, ul {
     font-weight: 500;
   }
 
+  /* secciones  */
+  .contenedor-titulo-seccion {
+    padding-left: 4%;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1; 
+}
+.contenedor-titulo-seccion h1 {
+    display: table-cell;
+    font-size: 1.4vw;
+    font-weight: bold;
+    line-height: 1.25vw;
+    vertical-align: bottom;
+    z-index: 2;
+    color: white;
+  }
+
+
+
+
 /* Top 10 */
 /* Carousel container */
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: transparent;
+    border: none;
+}
+.slick-prev,
+.slick-next {
+    background: none; /* Quitar fondo */
+    border: none; /* Quitar borde */
+    outline: none; /* Quitar contorno (outline) */
+    box-shadow: none; /* Quitar sombra */
+}
 .slick-prev{
     z-index: 1;
-    left: 10px;
+    left: 30px;
     position: absolute;
     margin: auto;
 }
@@ -234,6 +284,16 @@ display: flex;
 width: 100%;
 height: 100%;
 object-fit:cover;
+}
+
+.sliderSinNumero {
+    width: 100%;
+    margin: auto;
+    padding-left: 4%;
+    margin-bottom: 40px;
+}
+.sliderSinNumero .cont-car {
+    margin: 5px;
 }
 
 @media only screen and (min-width: 650px) {
