@@ -606,6 +606,7 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     margin-right: 10px;
+    height: 250px;
 }  
 .icon-container {
 display: flex;
