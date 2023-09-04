@@ -265,9 +265,11 @@ display: none;
 }
 .slider {
     display: flex;
-    width: 95%;
+    width: 100%;
     margin: auto;
-    height: 20vh;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 .slick-list {
     height:max-content;
@@ -589,9 +591,12 @@ nav a:hover {
 }
 .slider {
     display: flex;
-    width: 95%;
-    margin: auto;
-    height: 20vh;
+    width: 100%;
+    padding-left: 50px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    overflow: hidden;
 }
 .slick-list {
     height:max-content;
