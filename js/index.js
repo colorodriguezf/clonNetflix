@@ -1,7 +1,15 @@
-$('.slider, .sliderSinNumero').slick({
-    slidesToShow: 6,
+
+// Menu hamburguesa
+ $(".btn-hamb").click(function() {
+        $(this).toggleClass("active");
+    });
+
+    //Antes estaban las 2 sliders juntas, pero como no puedo sacarle las flechas solo al del TOP, tuve que repetir codigo
+$('section #slider').slick({
+  slidesToShow: 6,
     slidesToScroll: 4,
     autoplay: false,
+    arrows: false,
     responsive: [
         {
           breakpoint: 500,
@@ -11,10 +19,10 @@ $('.slider, .sliderSinNumero').slick({
           }
         },
         {
-            breakpoint: 800,
+            breakpoint: 1000,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3,              
+              slidesToScroll: 3,  
             }
           },
           {
@@ -26,6 +34,39 @@ $('.slider, .sliderSinNumero').slick({
           },
     ]
   });
+
+$('.sliderSinNumero').slick({
+    slidesToShow: 6,
+    slidesToScroll: 4,
+    autoplay: false,
+    responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: false,
+          }
+        },
+        {
+            breakpoint: 1000,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,  
+              arrows: false,            
+            }
+          },
+          {
+            breakpoint:1400,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              arrows: true, 
+            }
+          },
+    ]
+  });
+
 
 //Nav efecto:
 let header = document.getElementById('header');
@@ -41,7 +82,6 @@ function handleScroll() {
   }
 }
 window.addEventListener('scroll', handleScroll);
-
 
 //Cuando se clickea en el icono de busqueda, se abre el input
 let searchIcon = document.getElementById('search-icon');
@@ -61,3 +101,4 @@ document.addEventListener('click', (event) => {
         searchInput.classList.remove('active');
     }
 });
+

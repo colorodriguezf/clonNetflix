@@ -11,9 +11,317 @@ body {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1); /* Color casi transparente para el "pulgón" de la barra de desplazamiento */
+}
+
 
 /* Header */
 header {
+    background-color: none;
+    background: rgba(0, 0, 0, 0.365);
+    position: sticky;
+    top: 0;
+    height: auto;
+    z-index: 1;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    padding-left: 2%;
+    margin-bottom: 10px;
+}
+header.active {
+    background: rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    height: auto;
+    z-index: 1;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+nav {
+    display: flex;
+    background-color: none;
+    background: transparent;
+     align-items: center;
+    padding: 10px 0px 10px 2%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #e50914;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;    
+}
+nav ul {
+    display: none;
+}
+nav ul li:hover {
+    cursor: pointer;
+    color:#e5e5e5;
+}
+.contenedor-img-profile-icon {
+    cursor: pointer;
+}
+dl, ol, ul { 
+    margin:0;
+}
+
+nav a:hover {
+    cursor: pointer;
+}
+/* Boton hamburguesa */
+.btn-hamb {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    background: transparent;
+    gap: .30rem;
+    margin-right: 10px;
+}
+.btn-hamb > div {
+    background: white;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+.btn-hamb.active > div:first-child {
+    transform: rotate(30deg);
+}
+.btn-hamb.active > div:nth-child(2) {
+    opacity: 0;
+}
+.btn-hamb.active > div:last-child {
+    transform: rotate(-30deg);
+}
+
+/*----------  */
+/* Parte derecha del nav */
+.right-nav {
+    display: flex;
+    position: absolute;
+    right: 5rem;
+    gap: 20px;
+    align-items: center;
+}
+
+.right-nav .notificaciones, .right-nav .contenedor-img-profile-icon {
+    display: none;
+}
+
+.profile-icon-button {
+    display: inline-block;
+    border-color: #fff transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    height: 0;
+    margin-left: 2px;
+    transition: transform 367ms cubic-bezier(.21,0,.07,1);
+    width: 0;
+}
+/* al hacer hover en el perfil, la flecha rota 180 y queda hacia arriba */
+.contenedor-img-profile-icon:hover .profile-icon-button {
+    transform: rotate(180deg);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#search-icon {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+#search-icon svg {
+    color: white;
+}
+
+#search-icon.expandir {
+    transform: scale(1.1); /* Cambia el tamaño del icono */
+    display: flex;
+    width: 100px;
+    border:solid 1px white;
+    color: white;
+    background-color: rgb(35, 35, 35);
+}
+
+#search-input {
+    display: none;
+    border: 1px solid #ccc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 120px;
+    transition: all 0.3s ease;
+}
+
+#search-input.active {
+    width: 180px;
+}
+
+
+
+
+
+/* Hero section */
+.hero {
+    display: none;
+  }
+  
+  .hero img {
+    display: none;
+  }
+  .titulo-img {
+    display: none;
+}
+.titulo-img img {
+display: none;
+  }
+  .titulo-img p {
+   display: none;
+  }
+  .contenedor-btn-hero {
+    display: none;
+  }
+  .contenedor-btn-hero button div {
+    display: none;
+  }
+  .reproducir, .mas-info {
+   display: none;
+  }
+
+  /* secciones  */
+  .contenedor-titulo-seccion {
+    padding-left: 5%;
+    margin-bottom: 3px; 
+    position: relative;
+}
+.contenedor-titulo-seccion h1 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin:0;
+    color: #999;
+  }
+
+
+
+
+/* Top 10 */
+/* Carousel container */
+.slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: transparent;
+    border: none;
+}
+.slick-prev,
+.slick-next {
+    background: none; /* Quitar fondo */
+    border: none; /* Quitar borde */
+    outline: none; /* Quitar contorno (outline) */
+    box-shadow: none; /* Quitar sombra */
+}
+.slick-prev{
+    z-index: 1;
+    left: 30px;
+    position: absolute;
+    margin: auto;
+}
+.slick-next {
+    right: 10px;
+}
+.slick-initialized .slick-slide {
+    display: flex;
+}
+.slider {
+    display: flex;
+    width: 95%;
+    margin: auto;
+    height: 20vh;
+}
+.slick-list {
+    height:max-content;
+}
+
+.cont-car {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}  
+.icon-container {
+    display: flex;
+}
+
+.icon-container img {
+    filter: drop-shadow(3px 3px 5px rgba(86, 86, 86, 0.782));
+}
+
+.image-container {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.sliderSinNumero {
+    width: 100%;
+    margin: auto;
+    padding-left: 4%;
+    margin-bottom: 25px;
+}
+.sliderSinNumero .cont-car {
+    margin: 5px;
+}
+
+@media only screen and (min-width: 500px) and (max-width:899px) {
+    #header {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .slider {
+        padding-left: 50px;
+    }
+
+    /* Header */
+header {
+    margin-bottom: 0;
     background-color: none;
     background: transparent;
     position: sticky;
@@ -36,6 +344,7 @@ nav {
     position: absolute;
     padding: 15px 0px 15px 4%;
     width: 100%;
+    margin-left: -40px;
     background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
     box-sizing: border-box;
     transition: background-color 0.3s ease;
@@ -73,6 +382,9 @@ dl, ol, ul {
 nav a:hover {
     cursor: pointer;
 }
+.nav__toggle {
+    display: none;
+}
 
 /* Parte derecha del nav */
 .right-nav {
@@ -87,6 +399,13 @@ nav a:hover {
     background: none;
     border: none;
     color: white;
+}
+.right-nav .notificaciones, .right-nav .contenedor-img-profile-icon {
+    display: flex;
+}
+.contenedor-img-profile-icon {
+    align-items: center;
+    gap: 10px;
 }
 
 .profile-icon-button {
@@ -150,14 +469,20 @@ nav a:hover {
 
 /* Hero section */
 .hero {
+    display: flex;
     width: 100%;
     height: 85vh;
     margin: 0;
     padding: 0;
     position: relative;
   }
+  .hero-content {
+    display: flex;
+    width: 100%;
+  }
   
   .hero img {
+    display: flex;
     width: 100%;
     height: 100vh; 
     object-fit: cover; 
@@ -165,6 +490,7 @@ nav a:hover {
     position: relative;
   }
   .titulo-img {
+    display: flex;
     bottom: 30%;
     display: flex;
     flex-direction: column;
@@ -175,12 +501,14 @@ nav a:hover {
     width: 36%;
 }
 .titulo-img img {
+    display: flex;
     width: 100%;
     height: 100%; 
     object-fit: contain;
     margin-bottom: 2vw;
   }
   .titulo-img p {
+    display: flex;
     color: #fff;
     font-size: 1.2vw;
     font-weight: 400;
@@ -200,6 +528,7 @@ nav a:hover {
   .reproducir, .mas-info {
     /* padding-left: 2rem;
     padding-right: 2.4rem; */
+    display: flex;
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -226,6 +555,8 @@ nav a:hover {
 
 /* Top 10 */
 /* Carousel container */
+
+
 .slick-prev:before, .slick-next:before {
     font-family: 'slick';
     font-size: 20px;
@@ -295,11 +626,97 @@ object-fit:cover;
 .sliderSinNumero .cont-car {
     margin: 5px;
 }
+    
+/* ------------------- */
+/* Featured section */
+.featured {
+    /* Placeholder styling for featured content */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-@media only screen and (min-width: 650px) {
-    .slider {
-        padding-left: 50px;
-    }
+.featured-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+.featured-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Genre section */
+.genre {
+    /* Placeholder styling for genre-specific content */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.genre-item {
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+}
+
+.genre-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Carousel container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Number on the left */
+.carousel-number {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Content on the right */
+.carousel-content {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Movie card */
+.movie-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-card h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.movie-card p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 }
 @media only screen and (min-width: 1200px) {
      .cont-car {
@@ -413,8 +830,10 @@ object-fit:cover;
 
 /* Footer */
 footer {
+    color: white;
+    background-color: var(--bg-color-dark);
     text-align: center;
     padding: 10px;
-    background-color: #000;
-    color: white;
+    margin-top: 3rem;
+
 }

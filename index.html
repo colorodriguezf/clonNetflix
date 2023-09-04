@@ -10,11 +10,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/styles.css">
     <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/dist/boxicons.js' rel='stylesheet'>
+
+
+    
     <title>Netflix</title>
 </head>
 <body>
     <header id="header">
         <nav>
+            <div class="nav__toggle" id="nav-toggle">
+                <button class="btn-hamb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+              </div>
             <a href="">Netflix</a>
             <ul>
                 <li>Inicio</li>
@@ -34,7 +45,7 @@
                     <input type="text" id="search-input" placeholder="Titulos, personas, generos">
                 </div>
                 
-                <div>
+                <div class="notificaciones">
                     <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ltr-0 e1mhci4z1" data-name="Bell" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.0002 4.07092C16.3924 4.55624 19 7.4736 19 11V15.2538C20.0489 15.3307 21.0851 15.4245 22.1072 15.5347L21.8928 17.5232C18.7222 17.1813 15.4092 17 12 17C8.59081 17 5.27788 17.1813 2.10723 17.5232L1.89282 15.5347C2.91498 15.4245 3.95119 15.3307 5.00003 15.2538V11C5.00003 7.47345 7.60784 4.55599 11.0002 4.07086V2H13.0002V4.07092ZM17 15.1287V11C17 8.23858 14.7614 6 12 6C9.2386 6 7.00003 8.23858 7.00003 11V15.1287C8.64066 15.0437 10.3091 15 12 15C13.691 15 15.3594 15.0437 17 15.1287ZM8.62593 19.3712C8.66235 20.5173 10.1512 22 11.9996 22C13.848 22 15.3368 20.5173 15.3732 19.3712C15.3803 19.1489 15.1758 19 14.9533 19H9.0458C8.82333 19 8.61886 19.1489 8.62593 19.3712Z" fill="currentColor"></path></svg></button>
                 </div>
                 <div class="contenedor-img-profile-icon">
@@ -80,58 +91,444 @@
         <section>
             <div class="titulo-seccion">
                 <div class="contenedor-titulo-seccion">
-                    <h1>Populares en Netflix</h1>
+                    <h1>Tendencias</h1>
                 </div>
                 <div class="sliderSinNumero">
                     <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeqfT2_-pIeAnhkqj0GpudyhvXhx94AqyF9tkpneVdXu-3OATs6WlyyJJGhDCI9f8aYJJShAluJXN888F2NuB1cdlle-7Ky89bq8VkR-ilzL8yy5sT_4nUedoHC5jun8INFE.jpg?r=a07" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABS3VsKxh3Qyn9M9qS8haPQuS5hSBqwKzv3EnSynBbxj0t9i5sR1gwwqvZ8Q8UaAoIsR0HllG85bG90Zw1zn3yWbR5sf8IZ1gFbUdU2Mgb1-dRhKIYQqQyWQJc83aIH-NCGXnnfo1ZMfhRve2y_XItRlYVQfg7jL_5UqHHKiNSn8i1rY58q8IAoBLVV9PjM0ajlYoq2kBTWWeAdjUYdGuJqJS2viXmLH_eizbbeXcK3XTjdsT1T6PywRSvjasi2NhUuxVSZIrB6HDiyPuoexxda07wBf-7T5ybv9iRCiUDybQKQFH_OrAi_PZfA.jpg?r=e78" alt="">                  
                         </div>
                     </div>           
                     <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcwd1QW8gmigcmP6msO7ZEdIMXHT-YOOH2Ht3Y6C0WT73a5_S_kLGvOCG6VlgWLpvtEZr25AUxi2B_XMlzkceWN6eHl3QlHegQ3C2EpE1q3Bbj6MWhPHXfmRY8DSLZx9ovFeEwjINd80KXO5E6xeULZMk8x8GqX_uaBS5XOemHYN2JgEfkaucSITfZ5VnQI.jpg?r=439" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZwDvm1n95tdUlapIrF8SzEEuE0Tl8JPM-K-H1Sv-5BciJhzsMgcSj4ddbRCVmRNVDokrNGiwxVSrzS3Jdn_MCWH66u4HvcOqk_iR0vP0lEywOe-79ZAG69JfdyTIn5oINjg.jpg?r=2db" alt="">                  
                         </div>
                     </div>
                     <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdoU6Mt7pM2U0HzJQBWB6ysvJ9dZQvarpBS7q5J2GbMlHN5VZ6NEQ2Ol-dMd6wCx42l5HUuIne6DQXjQ6av-CxTshkBqE3dwXwPX7pIGYu4grbhUl3YXfXS7DiSOjuFGQzbW.jpg?r=021" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZ6KVzGbm1mJpXIdwBVajU1T30rnpgwRb3Z8a5_diQB54j3FWAWWmcFplV2PCQCIR31uMTsju8saliw_bJcoWnfh8ZVkh12Ih7zEagD-CfYLUAJC2kQUomS6caut5NYXqYRl_ml2qvpyzQvkMarHiA9PNdCKBIU10-Ok6qbIyNIHEXDFLGIIAn5iNWTBhJSJbl-IRQEOaCmE3BKhWrW3tYo3N3F7chfMELuFBjC3BLL19o8bwUPhLEo6aU-qMv0zLIZOeYMdX_JOYGPdF--eTc4k56L2Pt4.jpg?r=448" alt="">                  
                         </div>
                     </div>
                       <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWIjFeR91MRv_X6jE9LXe4PeYEQ0UmPsjYdQMQn_KvXmntMin53OciVw0QqOxz0LiaLT27ZvTZQnGVPVpJvzZOVxs5ZFzvev49aK-rSELGkTJB_Kf0HqI889-oqFBAMg4eBJ.jpg?r=397" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXmyB-9IGoD2Nqjf_fupk6LjGopB2ffJSGdjcF9zzSYFvIZTO4HJBAcHNcajel3Uk8GA4DBd4vRgXvBjt7s6IEh5jzZ7JzjcdPT5NQLumwtu3QZMFlC_benDKLHazLyX387g.jpg?r=ab4" alt="">                  
                         </div>
                     </div>
                       <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVrl1XGG860l3aXy--YIH5fHHNEgC71aCRWGl8ljSe2L_Xbsz5tYa6Qozykx8Q07ZNTlkWFu5GsyIMchJv-xeSFi-DqYzwGNvnQDKoYQ9JJinVTaijvGFHCacb8M_LYsZwwo.jpg?r=369" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaVGIWA1FTzm5DZEpp717RLvGf813miKaCetsJS7oVjBBjBx5IldR2d1Wcu4CcIospjpwm60Hc8TS3s3aca4kbweuvVk1P0U71StvbI6bRI8PMuoJuQmEmDh6t5BXsYrQBh-.jpg?r=a1f" alt="">                  
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZW60ij6Aa9zVp2CrtnBKq5uNNuz0GPy7Kx8rhNGZIpSTX4plqXUi-2N0l8zNJmiZe7XQDTSCRDTCkCCmIdxUqVizJpxCa9fJ9oaYBLc0BCXMus9wAkKJ-p2NqD-JP46fgAl.jpg?r=d21" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUtKpBfO3s-Vxv5s3WAHJyqkTV7UQvl7kWECSsc2K1vxzoHCJew7RH686AfSjqC0W2b-vrcEveR-ffkT2iaZUX1K83sDpysoOSInJFAqCavZPJhRKQ1n8m6Qu3ENpxWRkXovsP6Ce1CLignXEUse0wbIGFxyM7SNP94jkFTOIqTaoDk4lFldY2KMXyUNXaCx3OGv88hnPbEWCXX6pP8eIHucKjZIz95sii5NvvjbKFU3irsM9OqKCcicenIluMYuqPE5sCWaVLbPvG2RjsvdUDCqDYSUig.jpg?r=a6b" alt="">                  
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSr3Xu8s4U2Jkq5_HGJODY3mLO_J6AUs-Y8MB5EOBKw8Ky_ucN-zYvsv6PHHP4TF_RkI02m9h-668stzf8OV5czxSN_bDzjMmSWw6GSQ8etj4eRqtQi_gatEgWyW8U14A2fmsSBw4-SW81rFoNEM19SQfowvsUD6TqlIXnIXd3U95TMSsb8Z5yf3owrxpDrQIy4pOKDnePntLV9fhCmFtDsFF79KdICcCp-qrhYtGsDFEJKwGFmnjmF8VLA_TQLT4cbf9vmD0Xq3C21btedKudJQyFx6v9hdf2da_V__qpT4ez42S0vBVnXKbzkHi6vLXt1cUJRSy34n1kx58RxmxUikn5qHj4vCOnW6k4UpMRKiUIzBB_im.jpg?r=e78" alt="">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABac1lUzKrZcoOGt1jelGkqyqZM7VOalpL7pETgGNb-sVeG61FOjTFl5EcXQPvfu5-W6aDEK-hWlt9jN6gPWGKYVmT1IkSnERNQk.jpg?r=01d" alt="">
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb5SyO9OMY2BgCbxvIdZtWg5i6WFeqJQG7zs8bA13c6kke12zmRJHSqghe0nD5GC5vwqhv6WLY8aGymK0Wi4_JpJAlKCKfGcNRty5FPrtzErdIAFg4Q4Q6LwFpa24Dr3Nn64hLqkw6fL3IWxMPNjuYCRnXSp7yAqaXU.webp?r=da0" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeqfT2_-pIeAnhkqj0GpudyhvXhx94AqyF9tkpneVdXu-3OATs6WlyyJJGhDCI9f8aYJJShAluJXN888F2NuB1cdlle-7Ky89bq8VkR-ilzL8yy5sT_4nUedoHC5jun8INFE.jpg?r=a07" alt="">                  
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVrl1XGG860l3aXy--YIH5fHHNEgC71aCRWGl8ljSe2L_Xbsz5tYa6Qozykx8Q07ZNTlkWFu5GsyIMchJv-xeSFi-DqYzwGNvnQDKoYQ9JJinVTaijvGFHCacb8M_LYsZwwo.jpg?r=369" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABexMFTSu3Fh3PyD1S1y-JvAwXm1Q9nblemkHVG7UcmekZw6jNDObd8Mdffb6N-YJ1Q6dcFiF6Nrfwj1xyUGPz6ftySh4Y6So8MxoaJsA_DqLOcNEBvj7A3hJgHSgsNTuvkCr.jpg?r=f3e" alt="">                  
                             </div>
                         </div>
                 </div>
 
             </div>
         </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Series de intriga y misterio</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXPuehVphE8PbMYhpi-tzCLh-bk1zOaxUwg2j5fw367YIT0cqajKBTySU5RfBKY0rth6HJb2pblwfx-hngE34P4jEQUojJiV6JMAuVm0QlLP0xeQ-7AbnL7uza6ox2UALhze.jpg?r=754" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXj5fZokpw6ZPnmdCzJYDFZMD0lDKNSF0_-YxDxRm_VBu4eg7zWAFo6DoUPoG0-qXAxDPrDMC8yteCI14JtEowvW8Y9w8_6xb0SXwYYhHAs9CshFsALaY-r-2G6c9sTCtko6.jpg?r=2b8" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZW60ij6Aa9zVp2CrtnBKq5uNNuz0GPy7Kx8rhNGZIpSTX4plqXUi-2N0l8zNJmiZe7XQDTSCRDTCkCCmIdxUqVizJpxCa9fJ9oaYBLc0BCXMus9wAkKJ-p2NqD-JP46fgAl.jpg?r=d21" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYTSbDcEz0UVyvvTFgOu5u0wUn9R7XRQfSaGBRjHqHu8xjAWScR9_s1GLYXzwjqd7eq_iJyaCB8Q0TAMdjIM9bYs7r8WNqGqjR04Xk7SMbNNff5hYVkHLl3eKaGcitpA7f7j.jpg?r=3e6" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeka0IMbVR2rQTDp1WPhtscktLClgUFbhk_JcWsT6-AO4c8z1h7FtzF0idII2mB3G4Bb3GhGNwnO-OxgPLTFODZRGRXvuzwW-xasYQiLd9vaEc2pWUKBKiPbdpFOHPuwFm3g.jpg?r=257" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABduJIkMiE9b_PTCJ0zt5xdILFdad4VTu4pQmduyqdlpfWiOx6XKXqNLYb3R5LPAAhoIlUlhY_hv3pf2vOWkqLXO5IIt53jJeh6-HRyvtJExYgsFTB5MYpOPDl5ehWeCOyFPD.jpg?r=e02" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfMkPAFxP6udi6BJRzL6DEpENtn6MpJzTWJOnK6qb5DKyXeGE_SaBpIUopw2YatBeBrxL089rnU0FRe1w5KHNwK2IeGbbOJnD8qQneP-SjWh5ZkM5nUe7AF20UyHG0r-g3n8.jpg?r=23d" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWIjFeR91MRv_X6jE9LXe4PeYEQ0UmPsjYdQMQn_KvXmntMin53OciVw0QqOxz0LiaLT27ZvTZQnGVPVpJvzZOVxs5ZFzvev49aK-rSELGkTJB_Kf0HqI889-oqFBAMg4eBJ.jpg?r=397" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdoU6Mt7pM2U0HzJQBWB6ysvJ9dZQvarpBS7q5J2GbMlHN5VZ6NEQ2Ol-dMd6wCx42l5HUuIne6DQXjQ6av-CxTshkBqE3dwXwPX7pIGYu4grbhUl3YXfXS7DiSOjuFGQzbW.jpg?r=021" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Series premiadas</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWIjFeR91MRv_X6jE9LXe4PeYEQ0UmPsjYdQMQn_KvXmntMin53OciVw0QqOxz0LiaLT27ZvTZQnGVPVpJvzZOVxs5ZFzvev49aK-rSELGkTJB_Kf0HqI889-oqFBAMg4eBJ.jpg?r=397" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABahdxjszQ_O4qq2vhFSSPYJxhNUJQ72x5bwb8FTPR3ccui5Fy8vDincbRIyq0FJ6prgtrYmwR-HWTGza3F52B69NOtyUuNJdWcISrCfTje9TxaDPVaaMqUPpZvdj9lZ0cniy.jpg?r=406" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbtrl-YCuTQTZZDfiU7tf5N_VMdaSNPVeXa3eZc6qS7ebjJFV2PDdh8mGu2FtuZLEmqDFqJRFc5-5Y7y6QcBRvH9rjOr5E9XobkKcJqEaeMmXnRKYVnLLkWFr8A99fnusgtg.jpg?r=a5e" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRNtesy30ReB0bLOvVJhIEfmBGCipSM1AetrJxNCHT7TPIrFu-uXC-VrkitWZPQmrGVp7attB8I91pbzsFB9Q3wJ7T5vW1hk5BcHtrWNQHy9I9LQB7CSOOSTo__F5pHYSb8j.jpg?r=6ff" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZ3yPExf0yQHO2OsGtBtq8cXRbf83QaES_XdktAGid2KCoxsea4zCW1qAoPUBtafooMaadDhb_OqP4IKd6WkQqzOzm2-VPcnYhsT8hU0hLMrkaKe1grmBOmqO6g1zgLX0neK.jpg?r=3ab" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfVm33d8FjtUrVZQfplWoGPAsCJugb_lE57Oqm6CPh3YwEIcByPOvzUkZwK5LErEfUL0KeNqz8zPFSisgW2Uq3xuJfhVTZWvGZXTbUT1WZ83aau7jvAtyaCz0cbVxEeFuZpz.jpg?r=d15" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYy0qkBgij7f6EQXhHPVxmZq4_iXpyWYYgI4Z-j9pZyfApk_zVaCWrPIp8NSnC5sWx3-PzFhTd39StcZ8NHf-_dwGXIHWZTEIOSeICR2ZOvHClJ-A5fX1KrTacNeCkThBzsb.jpg?r=a89" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABW__Yi_NNnQyJwuHruwfoxLhjZG65l9PXVTvrNZDiaJq5mPtJTJeETXR7I0S9UlO-9vpDwvyd4UzDs0rXr0r87g3Z3MXVxrR-07-OO_OHxg7BNSNcm3tEyZJPS88hFoR1-TD.jpg?r=ce8" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeWVUnLavhCav6NuSMWZFQzNqAYPNt3Pf1kzZ3L_gsCTz8PCUAUtFCg556QZHoLQ2oXWlNjSrcnNbKDAJB2hEk7zhQROs69AG4SknEcMQlF8RPFaRYXAU6hXiQVU-3jt7A5Y.jpg?r=b2c" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Nuevos lanzamientos</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZwDvm1n95tdUlapIrF8SzEEuE0Tl8JPM-K-H1Sv-5BciJhzsMgcSj4ddbRCVmRNVDokrNGiwxVSrzS3Jdn_MCWH66u4HvcOqk_iR0vP0lEywOe-79ZAG69JfdyTIn5oINjg.jpg?r=2db" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUtKpBfO3s-Vxv5s3WAHJyqkTV7UQvl7kWECSsc2K1vxzoHCJew7RH686AfSjqC0W2b-vrcEveR-ffkT2iaZUX1K83sDpysoOSInJFAqCavZPJhRKQ1n8m6Qu3ENpxWRkXovsP6Ce1CLignXEUse0wbIGFxyM7SNP94jkFTOIqTaoDk4lFldY2KMXyUNXaCx3OGv88hnPbEWCXX6pP8eIHucKjZIz95sii5NvvjbKFU3irsM9OqKCcicenIluMYuqPE5sCWaVLbPvG2RjsvdUDCqDYSUig.jpg?r=a6b" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABe2PXT5iP6tfOid7alm4-1uxm_fWYmcp-euw4dj9jdrwReuXlPACgj2lws6YNIwKuQ7mUtrZwuztd9aVx1hFsH5xJxyAAIfwWFo.jpg?r=1dd" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbhIVjfNnAE6XevNxOBXfI7Fe_f_Wmb5wF0Ohgk-HIBUN5uczR52ZA2J2g0qn1L7byN-kfmIHJc2NfGuQ8VDnHZlM6X6hdkAQOPh3ZpuNVPZbKXgh0elDiEshyjYYgWQePsd.jpg?r=0da" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXRV3M_wEFsWeb0J5Dp8dUKt-RRnmU05pTxf5WwOcglMJszRlEcVtdba_ZuuCubXgh76btQpRhc-tuMrSHjFfzwU9L4CbuTeTWQGt4pQoJP9gKHxRGp8Sy42axSpsxllZLGN.jpg?r=eef" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQaw8NBi1hKGqWEd3ggx0yqam3bPa_jr8FL-v784tBpnr4uGQrCX8APe8LgvgmBpypMCb-dGO7T45sBY1mCG9CBZNaxZLg58c5BQj3c43O5pLpsEzViKfeUxYrqPMxbsu2aIND7TMaGxuIOp2xGBzx9VdI1cQT18gyfWFqUsPDhnX6IbYOyTrqqoS3wryUdlrz3HKaqMbqhQANDHwAo04E3schs_3j2P2wZateIML6klzwlYCu_ZvTUC9iN_RzPgc-xeYAwKzXhiBeRNFCfm9ojw5opJ6IeDHWg9w1PXdy4BCs1n4yBMxacRwS4.jpg?r=dca" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcUN6uBML-Sfnx-M92q0wO2g5ZjXiSzQsCHVlvlXauhvtaVGDSdQ2mdqFdYeo9Iat4WyECgK9Mo9EEX6o1QeXKrZ2GnmM6HkyfhUG4y5QRXwSF_azVuC83madA-m9Ff1mpPD.jpg?r=27e" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWqsDWM-OXill2IQyV4ZaoVkmPSxQjT_vyAQCcZMbQJ7cYktO44rvScCT2nRG_xqv7fEWBaO-GhGOWSUUnCoHk3QZUPTbVyU2z5NwAEg21vqBbP9OJz8Ow8mnOcH_wp2iznF.jpg?r=bd9" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYCkV5Ck8yLvOMpKVoJ2HGDGRM9Hizz6rHS-yKa5wZ3eD62hTAUdIrmbyIVBU82pb2wwIp6UdFabFG0hBMhCfg0KtmAI7JM3i0EmnQBchp8i78Ydpxj9QYSYobPxfdfUiYViMG6JifYWRp5xDfuG25e7M3NzbH-WG-ygADzeetzd6Pi1gbKQjwE38oeDrEfKp_LcvWQMeZmvzs4el3np-apXJ7vgk2y7QrOObuLz5Z8_tqNV_ByVQZPtoil3q2PCPcGtA8STo-qtWPVjPBHblgYDosCmhBqfWxc9DwFFE_vZS_mTi2cjnkDe_i94GE9MfsGedQylXh9vU0CQIHZ_qgK-EwyMEdqN_zu9VubBGUwpPtjmrYrPogho8A66xnfxNt5X0s5qIZ0_TNuDPVKIagTG9r5BA8vfs4G_vIDZNVIr8Jq5xQ1aRiZF7HuWXvJUTB23dQx3vxze.jpg?r=7a1" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Series policiales</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZhYtZmPuZISVXESQfbaj7A7--2UbTJrynQqIePCyQ8v_vB8DcOiGpHmRsxj-3w7XhKQ0s580RN2Se2h8xjLUV7Rq1nFz3IwRKEwESvK6S5K5HycQSljssiTHwBrzsRlVx_H.jpg?r=c90" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABR2PVNM0hxVW52fPfB8rq8IQTvfOWsKjmyVjnJNadj5ecjioiBjLk7WJqVSfmHeZZgh0LuoOD46etq-ebQaQDi9RW5ChM3Z0388.jpg?r=deb" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdVGTigQs2lZw1H0FnbDlUs3b_NgA7pznP4zzU8JWjEh-eErv5EBpHIcf0zlVjqSMoHcOkal-Y6hRvB2lofWeufe16W9QXyeXj141zKHA3Wwfx5FZx7EpaxW21NLxB6GuZj6.jpg?r=f26" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUqQimb3DD3nbyNh1FAbvLOp1Yxi2Rx51G7A6dx6yzvqf_ZNFspe1e395hMZwq_dO9BXwNwaGp-kqU2vAAJnW7o0SPij_OsOm6RjT-4JtK4OlIqDICmhHb4U9tOrm_M2YFE_.jpg?r=17a" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTjfwXIXhGFW8NF4vJLMcE99X6o9utsAOi2HQZt9P0BcitmlhArK6VNcxhPP1OL_ZECohvlFII47HnXeLSd12jJivJ9ddgxFjHjbhaJBjs_MRGCsOiStrO_quxnimglEp8sx.jpg?r=9c9" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfHTnOJRbLFWpxRsUyKKMNe-9VMOt1CQbRfdJtfyfYUEHQ_sbpp1ATjtwwKYv753LgeKEjlwTTUNsCEXmGEpZaTESuSdYiU6_1YnN1qOXAlXGLccJ1r8S9WSJlJB0MdDra5R.jpg?r=271" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTSiQk0obXAJzsgkI0PpHnqcGrNTYOi3WeVft5lS-gUoWdjNBXvwU1Rbv-1SI3mDd7xCzMnvYPBWagkioyOSZGI882-q4P1VdlwnbFwG1G-nUysImuVgkL0JNNMC_GY3d7CM.jpg?r=86b" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXTvlvLEvASH1vZBLxpnBWm0CkChUKVobdcwV7Qgf3xJRIlVlc7tDOUly6K29ktmW9R2rf1KkemG7VYhvkhLj9W8DPxWSQAIH-OjvfIW0ikrhqTiMf0gPzZzbQirmkAAbu6l.jpg?r=9dc" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVc4UKLRf9-dPmenppp7279JCt79E8Ge8cvA316w_f7Z5XeIM-zqV5VC4aLz8XkO-yskgLTjhzXFfv6z8P4UR5d6VEViKRzhQE3S-hUIXItYCvFA03uVDt977JliR68e6YGt.jpg?r=29c" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Programas inquietantes aclamados por la critica</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeWVUnLavhCav6NuSMWZFQzNqAYPNt3Pf1kzZ3L_gsCTz8PCUAUtFCg556QZHoLQ2oXWlNjSrcnNbKDAJB2hEk7zhQROs69AG4SknEcMQlF8RPFaRYXAU6hXiQVU-3jt7A5Y.jpg?r=b2c" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABa3IC_4NEM9BPnW1DF6eo36jJTV1mknNgsj_epYqs1th1b4eyIJG9sSffOuRDxuawJCVyQzI-FlCQPbGKeu13DDle598siM-L7lk2Smra-exgr1xHNQw2rfdBy-6EPU7QLCY.jpg?r=a13" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYsBj-0ka2z-FF6mA0Xn0KLnVJGrYMd3oyAI6DLmYlW-eEd6IaySP3OM9bUI5h2wX098j6z0M937Jo7nuRV5N-OQHZqxq2wC4pzCwN4_wXHqpU3C54jp0aRMAI_tiN6PiKc-.jpg?r=d38" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABc8aQFmV5z61uVGZxxrpmq5B-CS3NMDjEd4MCZ61qk-f6hrHcd-1p4OZcACQWnP5aW4lI-mhe57Y2g6KAJmdqR9cEqCkENXIXoNkQDjBj7_843TKeKsCwJPM5Jx0lbLe0ljW.jpg?r=c72" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABexMFTSu3Fh3PyD1S1y-JvAwXm1Q9nblemkHVG7UcmekZw6jNDObd8Mdffb6N-YJ1Q6dcFiF6Nrfwj1xyUGPz6ftySh4Y6So8MxoaJsA_DqLOcNEBvj7A3hJgHSgsNTuvkCr.jpg?r=f3e" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfp26Wb3yG2aHkD8bJuDk5w2aTOZPeRIVf4tO0yrIOg_dT1raG628cJiDjasXQn39Xo1-7BSt8-d-BNNE--Lv4I8UsX5cSb3jmWxV8uXnkMG_4Q7o6IdNoap1frhidy9FDrJ.jpg?r=fcc" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaD5t2CgwaX1LTEYtf-IzYXJdxB8-KQJuO7qnnaVR4hFWXzYfTK8OdHphNolZi-KOBW7FL5TUYg6IbUrqmLyEO2_ndT2NTpKECm8Ihz0NVtrbDYV5cjM4ZxB1dUbdjT8AHKh.jpg?r=f7a" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQ7r68QZzHex1-ArbrGph62R8QqcQAi3wCcsO4U2FSmbB9Gj8jik8HyjPSIvQ_ynZ_oJOJri3sPTNiGwN-lyd5Ct-oWUu70aDjnpiWFOZWZuz5AuhjuhpdSxfZI4Qnpbh7Tm.jpg?r=0d3" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUf-sk7xmUGsUXYSdt5IrSV3FhTJ6fuuK_AMULJ_QXam_Z0rmSJxDwhh-z_NjcDZle7PX78eeyyvdzvRyfDDD6S35M9wNSLDw5rSA-k-DSmZXXKaBwXatJnnCu0KMK7c0yo9.jpg?r=215" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Misterios de TV de suspenso para maratonear</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABfMkPAFxP6udi6BJRzL6DEpENtn6MpJzTWJOnK6qb5DKyXeGE_SaBpIUopw2YatBeBrxL089rnU0FRe1w5KHNwK2IeGbbOJnD8qQneP-SjWh5ZkM5nUe7AF20UyHG0r-g3n8.jpg?r=23d" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABS_t1VQvh1OcoD6qvI0SjmKnYUOVtiyP0oLl3KDBJQBxPbiBawFNMiWNWD_ykU7nWNJ-wbjCkTtjRBmqUGjKvK7xeOoAmz1szx296zbPg8b1x8xWmLgRo0tD15ggGhlfVQU9.jpg?r=e4c" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaI-mxDQSYwTXKMXE58w7d6FiftAabgWFF9acbeYIUo_9-vHIX2drFgX05zT4AFqAzNKX35O_mZ9AE5O1GBa8vYAh1JVac1nMFULoxyAnvTXDahWFKaO4N-O8W0ssEVXqBrK.jpg?r=753" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb43ihevZNrCjtwmdA8A2swpZAXLbF_bzUQEqGv0ONqUqmGVFABiVnVQOssFiium0lETQCeRlb6P9r1qpLygnmOo0g4ijpeaG6WcEqgOPRvYmcMigT80EZFBI3VyIcno9pgY.jpg?r=994" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXTvlvLEvASH1vZBLxpnBWm0CkChUKVobdcwV7Qgf3xJRIlVlc7tDOUly6K29ktmW9R2rf1KkemG7VYhvkhLj9W8DPxWSQAIH-OjvfIW0ikrhqTiMf0gPzZzbQirmkAAbu6l.jpg?r=9dc" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXjp8ymPkMyT4Rk70H4b3HjXSj7Zg64ANNYS1ozY9_EZpyRNOcpSUcSD-H6sMrpG1yRn5qyY7qNMPqS1deuLXOXvdvb4EbszZRr4Lo91OtaU-u6ofog4bMRrJrLuRhVDUCV-.jpg?r=81c" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTX5UebVHw61l7l0t0U2pCArpfRaiMw6MFJ9y1xKWXJu_R7IbeouYvddnKSuboRCsmWGjYYD_SQ-pWYQtCaO0ncaAoOzVRhtRRfPj_J2wvQMgs4VD08e7CeuK_06jshYyHCD.jpg?r=032" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABU2ABAp4lQLGdHf0qVmNQyxPA2BG4iQ-MtRHE106ryCPILYCKUXoi1FTeWgpOfxPuO3tsbYnWBemb2ljavpcYa6kKfB7Yg6FMoFeGCNVHIGsp6yhn8ZAcmuJ3zeY9dk0_jDH.jpg?r=419" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABX8ETEWGxbI1Wix3HzDL3kqPFUE-NbZ08rh5zQUnAcvLRKKoFC0lE6uTUg0Uz8-LxBmVadiIoZ_GD6M1O7liI3x91gMR12njmiaoY-6qH8m5vhox28QdWR8BgjgRMHKQuArs.jpg?r=e40" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Planes para el finde</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABe5LYO2oEIyjib1RTQd_d9CECSHuATeD5BydWZ8pRalVe2oKz1V344o_Z_cCru1uE0aXnGPcj0w9-0Os3bT2cWTZNRusSLXKYDKrkscmM0GD4QBCX4gdWo0yoig3tazAvnfB.jpg?r=c61" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTRl3crNrIy31F9q9qf4vcf_k0aDwYXEvdDtdvLd_Ujj--M8F0gTTR_BaVeQK1gTqyb8blZxp_sd4DlOJbGk0Fio2iF85mHNodppi2CAMoQ69WdF3RDS2RS-C75ywZJCJ0HH.jpg?r=ec7" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYEj_CVM69HMnVOyJTRfIsAmTO8E9Kr6aDwF5CJ_x_Xbz0hIhzp6NvQ1b_D8o0ZHBIO0IP9bLUtWmb9zOJaEKSDL-sTgtche-BQ5mVqMJr6QzSbSZjy5dH53dcMVYOFOjzDx.jpg?r=91c" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdBu5q0c9qwmFtxZ8h2sLr1lnQH9nJ02akamMuG3xPuuO2vpHZ8cMpOoy_2WqmcNo2ICTMD4RBeUYqhTnjmzl4JPmGmT9xQvWFkzawi3BNDDRGBKJGAuHKhsgzQ6rCIheDZ0.jpg?r=af1" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVtEq7x6q5y7D10IRUhfxeYpjnI236cLNp-XmqJmaZ2h1oB5i3pzt5s8MNz_deiseQIqxWfl1p26ZIHS9cuw47mbEBciLJYZXR4um_SKvuh3ZQLquHP0rPF7rCCX2_bpTQGy.jpg?r=438" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWAr43MGq6SddjnKoikmTlq-LHapkRKcsCW1oo-Fa3_hbbZ_Ym4q6rvd5d6WC2nA919Df8eHiIgcb5pAp2KsibUD4X1wohYiJ8XcbutK08AavTWyx4Xi7_T0bWnraN0-C1EP.jpg?r=741" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYBQAiK-H7O75JK-IZLmBL0oEnoVgPE6tfAkSLWhO0OWTUHI8uyolwChnOKza9vt9XCFBa5Ooh87w7lPsC40bClE4pz1IGPpcojAIoFU2QB23gqAqOTdxOZmm_bLE--TY63b.jpg?r=75e" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXTvlvLEvASH1vZBLxpnBWm0CkChUKVobdcwV7Qgf3xJRIlVlc7tDOUly6K29ktmW9R2rf1KkemG7VYhvkhLj9W8DPxWSQAIH-OjvfIW0ikrhqTiMf0gPzZzbQirmkAAbu6l.jpg?r=9dc" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRW3TcIuKoO9HnLqe8YG8nV4sVscPOgei4xOdsaALPV0GBrwajXLVPx8fCOzpyz-CxXk1qYeocdC1suPXPma6ZkvK27xiHpnb1QqfHcjDSF3dLH63AOi-kXK624Q_O3xSFIL.jpg?r=eca" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
         <section>
             <div class="titulo-seccion">
                 <div class="contenedor-titulo-seccion">
@@ -184,62 +581,171 @@
                             </div>
                         </div>
                 </div>
-
             </div>
         </section>
+
         <section>
             <div class="titulo-seccion">
                 <div class="contenedor-titulo-seccion">
-                    <h1>Populares en Netflix</h1>
+                    <h1>Series favoritas de siempre</h1>
                 </div>
                 <div class="sliderSinNumero">
                     <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeqfT2_-pIeAnhkqj0GpudyhvXhx94AqyF9tkpneVdXu-3OATs6WlyyJJGhDCI9f8aYJJShAluJXN888F2NuB1cdlle-7Ky89bq8VkR-ilzL8yy5sT_4nUedoHC5jun8INFE.jpg?r=a07" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABajCsLFD1qqHGBm3Zt0rVRTQLNO2eQddvIKgzR4Ywh0gewFa92ijwDEPW-yNgnGuTBD0_5m6fne3vjFJmjGBjs306kyx9LmWVbE.jpg?r=da0" alt="">                  
                         </div>
                     </div>           
                     <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcwd1QW8gmigcmP6msO7ZEdIMXHT-YOOH2Ht3Y6C0WT73a5_S_kLGvOCG6VlgWLpvtEZr25AUxi2B_XMlzkceWN6eHl3QlHegQ3C2EpE1q3Bbj6MWhPHXfmRY8DSLZx9ovFeEwjINd80KXO5E6xeULZMk8x8GqX_uaBS5XOemHYN2JgEfkaucSITfZ5VnQI.jpg?r=439" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRUEl2oVHiux_rmDFylyJPPDslxHyHqvm9pf04CVMIklcegJbbYAPfI_Y5BAkxhWLxkicB3A-hcMMSq9O2OKADQa1kFCpW-RwPo.jpg?r=93c" alt="">                  
                         </div>
                     </div>
                     <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdoU6Mt7pM2U0HzJQBWB6ysvJ9dZQvarpBS7q5J2GbMlHN5VZ6NEQ2Ol-dMd6wCx42l5HUuIne6DQXjQ6av-CxTshkBqE3dwXwPX7pIGYu4grbhUl3YXfXS7DiSOjuFGQzbW.jpg?r=021" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeBB6eOdXIfxkUHlMP7xOU7bHkG34ms_EcLT-jJ_5asUWOWye-w3fgZaX_0ZYYkvqmopReccPUT57nY11r3ZIeihmgqVLAnM38M.jpg?r=eba" alt="">                  
                         </div>
                     </div>
                       <div class="cont-car">
                         <div class="image-container">
-                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWIjFeR91MRv_X6jE9LXe4PeYEQ0UmPsjYdQMQn_KvXmntMin53OciVw0QqOxz0LiaLT27ZvTZQnGVPVpJvzZOVxs5ZFzvev49aK-rSELGkTJB_Kf0HqI889-oqFBAMg4eBJ.jpg?r=397" alt="">                  
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVUXdpmyKRPOL2KjpQotkeYMxbNtoWCPfCmQZAs0f9gip2CiCBsx5QuWsQ7hL8QYNw-mKyVBVIq9z3BT2O4JURkBFslfJ7PFFCQ.jpg?r=c17" alt="">                  
                         </div>
                     </div>
                       <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVrl1XGG860l3aXy--YIH5fHHNEgC71aCRWGl8ljSe2L_Xbsz5tYa6Qozykx8Q07ZNTlkWFu5GsyIMchJv-xeSFi-DqYzwGNvnQDKoYQ9JJinVTaijvGFHCacb8M_LYsZwwo.jpg?r=369" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYy0qkBgij7f6EQXhHPVxmZq4_iXpyWYYgI4Z-j9pZyfApk_zVaCWrPIp8NSnC5sWx3-PzFhTd39StcZ8NHf-_dwGXIHWZTEIOSeICR2ZOvHClJ-A5fX1KrTacNeCkThBzsb.jpg?r=a89" alt="">                  
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZW60ij6Aa9zVp2CrtnBKq5uNNuz0GPy7Kx8rhNGZIpSTX4plqXUi-2N0l8zNJmiZe7XQDTSCRDTCkCCmIdxUqVizJpxCa9fJ9oaYBLc0BCXMus9wAkKJ-p2NqD-JP46fgAl.jpg?r=d21" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABac1lUzKrZcoOGt1jelGkqyqZM7VOalpL7pETgGNb-sVeG61FOjTFl5EcXQPvfu5-W6aDEK-hWlt9jN6gPWGKYVmT1IkSnERNQk.jpg?r=01d" alt="">                  
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSr3Xu8s4U2Jkq5_HGJODY3mLO_J6AUs-Y8MB5EOBKw8Ky_ucN-zYvsv6PHHP4TF_RkI02m9h-668stzf8OV5czxSN_bDzjMmSWw6GSQ8etj4eRqtQi_gatEgWyW8U14A2fmsSBw4-SW81rFoNEM19SQfowvsUD6TqlIXnIXd3U95TMSsb8Z5yf3owrxpDrQIy4pOKDnePntLV9fhCmFtDsFF79KdICcCp-qrhYtGsDFEJKwGFmnjmF8VLA_TQLT4cbf9vmD0Xq3C21btedKudJQyFx6v9hdf2da_V__qpT4ez42S0vBVnXKbzkHi6vLXt1cUJRSy34n1kx58RxmxUikn5qHj4vCOnW6k4UpMRKiUIzBB_im.jpg?r=e78" alt="">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaA-1mHjULhV4Gse3WrVGJWHOfH3DrORx18kTzKImO7V4ehUdeCR3n2uYroptwasuJUAyYMpmmUX23ZcPfCAel-F4r5hgYvYVNGGWkb-iPpsVY06m-R0i6T7AbdY_IHVsxFz.jpg?r=4af" alt="">
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb5SyO9OMY2BgCbxvIdZtWg5i6WFeqJQG7zs8bA13c6kke12zmRJHSqghe0nD5GC5vwqhv6WLY8aGymK0Wi4_JpJAlKCKfGcNRty5FPrtzErdIAFg4Q4Q6LwFpa24Dr3Nn64hLqkw6fL3IWxMPNjuYCRnXSp7yAqaXU.webp?r=da0" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb23UfK2ybvFeaezXTi5G2rR2W9Mhd3PwEwq1THSMLPxBcNm7a90G4v0o8KDSI01Z-q2FsNk4b-NYyUdiAQYxSB2k8xZh8324lo-WkJGiUZXcp9aC1sLrxp6FuUe7tQPQtZk.jpg?r=90f" alt="">                  
                             </div>
                         </div>
                         <div class="cont-car">
                             <div class="image-container">
-                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVrl1XGG860l3aXy--YIH5fHHNEgC71aCRWGl8ljSe2L_Xbsz5tYa6Qozykx8Q07ZNTlkWFu5GsyIMchJv-xeSFi-DqYzwGNvnQDKoYQ9JJinVTaijvGFHCacb8M_LYsZwwo.jpg?r=369" alt="">                  
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABToJtYj9mV22DzTl12r68LGZH97I24kkzYLlk9adKTlg8YvseeP-3dpt_85C3G-9WxkaECrfkHl2i3OITzgusxEe2sLIxU3BUCbl9VoqS7C78Sh-9S0S-pw-j6W0PZdZSlYu.jpg?r=bf7" alt="">                  
                             </div>
                         </div>
                 </div>
+            </div>
+        </section>
 
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Series españolas</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTjfwXIXhGFW8NF4vJLMcE99X6o9utsAOi2HQZt9P0BcitmlhArK6VNcxhPP1OL_ZECohvlFII47HnXeLSd12jJivJ9ddgxFjHjbhaJBjs_MRGCsOiStrO_quxnimglEp8sx.jpg?r=9c9" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABd_j8w4Dtoq3_zj4hJpUNCDVj9VfDtkqjTVk1Uv6CsBS0wnU03n9ZZ0ZuSwI_lFzKBFDtI-9H0A7ZMd3dH8Q0CjSPmo61rcPjaar_YRDDqgywP89KvgkMf6zLQW3j6uC3YRF.jpg?r=8b4" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTSiQk0obXAJzsgkI0PpHnqcGrNTYOi3WeVft5lS-gUoWdjNBXvwU1Rbv-1SI3mDd7xCzMnvYPBWagkioyOSZGI882-q4P1VdlwnbFwG1G-nUysImuVgkL0JNNMC_GY3d7CM.jpg?r=86b" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaDwRwZxMeD_uqt2bu3zAmji5l4a9Ch_2EpOE-MTKcH9MCJatGhhWXWHJUyuoqJPqp3AumpoRS_NUzBsU_Xw40MfgYCa__1f5HZfIAlTg1iMILIkG1tWgBKkfq2_jBW0YLka.jpg?r=bda" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABa8aebal9cpbZUUtwJPqQTkzz4KFJLtUt2nEVKc-03VE5IUO-cpuwDcbeaYHb4wqB3VEneCnl-4-qQ8X-WEbmv6V0dP096cn3t2w5qUdN2eS81M1Yp02UqELLB-okndoWAzV.jpg?r=a2d" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRzCuSCkubKku0x8v6XEuDTOY7i3vQTifx-XmVPMyT7EJ01TB-1pKgeF5E1g6Oeo3HkEYBEoaEVX5rXVH1XWZn3ebfxLT3QHIAHv1fBrwornutwL7dkCuV0HOPNeIXEyD_uD.jpg?r=938" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQn4uU-RGiQ0NhagQOfSJdHykctVjspRj-ccwKwu50NcrvvktTKWMaXxRJQzgtA5R8gtQ0Izpl619rVc9Ogii7NClDgKfoS4-8DkLM_lgYXxIbtAYn-l8dCrw_sduexkxNYE.jpg?r=eb1" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRevgxwn1OWjXfIXwsO8TzVx4wDroEKlfwVm_GH43ttyOG6VC4VrFVW5ZBb-e1vGxpUHLIWBY5GX7X34Fk5Ndoz-EiRBsVd6mcAjU5HRtruG6Bcgye8g1saMPrC3SAO7sjhQ.jpg?r=744" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRevgxwn1OWjXfIXwsO8TzVx4wDroEKlfwVm_GH43ttyOG6VC4VrFVW5ZBb-e1vGxpUHLIWBY5GX7X34Fk5Ndoz-EiRBsVd6mcAjU5HRtruG6Bcgye8g1saMPrC3SAO7sjhQ.jpg?r=744" alt="">                  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-seccion">
+                <div class="contenedor-titulo-seccion">
+                    <h1>Series de EE. UU. basadas en libros</h1>
+                </div>
+                <div class="sliderSinNumero">
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeh4JPGestWD6-4Gg7n_6f_Lp9-c8DwXhv5fKg1cwPS5blRN6zwacYYk67zuT9M2uTXks2MrKr0j9unP4MxZzdsUXhKuonOUagIZKx7MXJOrZOGCBzxfeoVMKdFrYFo31yzH.jpg?r=642" alt="">                  
+                        </div>
+                    </div>           
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABaDboruVUXdCsU3qWlAT_Pz8PNdHn5SKWaQY9LanvML5efHK3hkN3oRTrYl_8l3eLQPGEeAFxWTGCgCIC3BULkoH7oGNNH77JHXdyK3wRYO5wqWiNlX5WGVoXt6aIpaI0nNT.jpg?r=119" alt="">                  
+                        </div>
+                    </div>
+                    <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVKhFtXj3nm3GYuOdGRG46GJMKI4tHGDArbGNP_NrfEy-ey00zXi457HfbT92273J7jDwX-gQTuReGVin3UtWjD5DsDphjh7ndUglDkfsJgyYBZRXZurKD5fMGMXtkWWy1Yu.jpg?r=615" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                        <div class="image-container">
+                            <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdiUookKGsY-jFH8p-YKtpeSZ0JD1UeGrzMd946ERVCw16h6_msxXrWa3Oi3lc3Hggl0ogaZ7BqDZslDSqJIPAd4860et1KFT9AdYGbUQmOLZy08I1Od6RasNF3hc1Oe8pS_.jpg?r=525" alt="">                  
+                        </div>
+                    </div>
+                      <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABc_Sojyp43fZDoWOncYl7F9nwT-wOh0O6KeTHqQB6gpMF20rVzFL0DkV6xMcL5zo5xr2lXltrUU2EupMsYRNIG3rZsPj7YNpYUjLwAUWkiFjsp8fjsRMCnj19qgPlUHPJV4d.jpg?r=2d6" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeroxC8rn9jNLn8FqcwxLIewRbmoVGEvTnhIN4TMGyfuZnLJw63Vrmu6rd3n934DW4lDP-R9wuXuAK2whTDJ0DxNzRIKXKWynlSs51Hntt7aT025Z34Os8j3Hq-8z6UfKEqq.jpg?r=9ff" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWmsxGZvMOQO5eVnMb2bn23ZpTYKp42IgpT5pLnSrXY7fpe-HVJODVNFq5EmhhJY9TEpuRqe6_-WUpfax5V1bifvf4xHlJ6wGlnZbTLIcG4rGkneYFOI6iX6a0BVI_awNz2M.jpg?r=97a" alt="">
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQ3sADqLiHDZzZGf62IaOqXQQL8Dy8McK4H_RGyE-SBIZTp-4gYQyf3hB5ORC8EhA5u81YQLH-ThVqquFyo3u64gbYOsgZVbruSez0jknU8JGWgw3zQRnjFQxNRWzpuwAjAK.jpg?r=402" alt="">                  
+                            </div>
+                        </div>
+                        <div class="cont-car">
+                            <div class="image-container">
+                                <img class="boxart-image boxart-image-in-padded-container" src="https://occ-0-7245-2773.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABToJtYj9mV22DzTl12r68LGZH97I24kkzYLlk9adKTlg8YvseeP-3dpt_85C3G-9WxkaECrfkHl2i3OITzgusxEe2sLIxU3BUCbl9VoqS7C78Sh-9S0S-pw-j6W0PZdZSlYu.jpg?r=bf7" alt="">                  
+                            </div>
+                        </div>
+                </div>
             </div>
         </section>
 
@@ -248,7 +754,7 @@
                 <div class="contenedor-titulo-seccion">
                     <h1>Las 10 series más populares en Argentina hoy</h1>
                 </div>
-                <div class="slider">
+                <div class="slider" id="slider">
                     <div class="cont-car">
                       <div class="icon-container">
                        <img src="img/num1.png" alt="">
@@ -355,6 +861,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--  -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
