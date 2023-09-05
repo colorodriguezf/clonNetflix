@@ -401,6 +401,68 @@ display: none;
     margin: 5px;
 }
 
+/* Footer */
+footer {
+    color: grey;
+    background-color: var(--bg-color-dark);
+    text-align: center;
+    margin-top: 3rem;
+    width: 95%;
+    margin: auto;
+}
+.footer-icons {
+    display: flex;
+    gap: 25px;
+    font-size: 1.6rem;
+    margin-left: 20px;
+}
+.footer-icons a {
+    color: white;
+}
+.footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-list li {
+    flex-basis: calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 11px;
+    margin: 5px;
+    cursor: pointer;
+}
+.cont-copy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.cont-copy a {
+    text-decoration: none;
+    color: white;
+}
+.footer__copy {
+    display: flex;
+    margin-left: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}
+footer span {
+    color: rgb(224, 50, 50);
+}
+.punto__logo {
+    font-size:20px;
+  }
+
 @media only screen and (min-width: 500px) and (max-width:899px) {
     #header {
         margin-bottom: 40px;
@@ -814,6 +876,17 @@ object-fit:cover;
     margin-top: 5px;
 }
 
+footer {
+    width: 50%;
+}
+.footer-list li {
+    flex-basis: calc(30% - 10px);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    font-size: 13px;
+}
+
 }
 @media only screen and (min-width: 1200px) {
      .cont-car {
@@ -824,9 +897,13 @@ object-fit:cover;
         left: 7px;
     } 
     .slick-list {
-        max-width: 100%; /* Ajusta esto según tus necesidades */
+        max-width: 100%;
         overflow: hidden;
       }
+
+      .footer-list li {
+        flex-basis: calc(24% - 10px);
+    }
       
     
 }
@@ -925,12 +1002,3 @@ object-fit:cover;
     margin-top: 5px;
 }
 
-/* Footer */
-footer {
-    color: white;
-    background-color: var(--bg-color-dark);
-    text-align: center;
-    padding: 10px;
-    margin-top: 3rem;
-
-}
