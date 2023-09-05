@@ -77,6 +77,54 @@ nav ul li:hover {
 .contenedor-img-profile-icon {
     cursor: pointer;
 }
+/* Menu hover img perfil */
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    width: 140%;
+    top: 110%;
+    right: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.493);
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.839);
+    margin-top: 20px;
+}
+
+.menu-desplegable ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0px;
+    padding-left: 10px;
+}
+
+.menu-desplegable ul:nth-child(2) {
+ border-top: 1px solid grey;
+ padding: 10px;
+}
+
+.menu-desplegable li {
+    color: rgb(233, 233, 233);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+}
+
+.menu-desplegable.open {
+    display: block;
+}
+.contenedor-img-profile-icon:hover .menu-desplegable {
+    display: block;
+}
+/* --------- */
+
 dl, ol, ul { 
     margin:0;
 }

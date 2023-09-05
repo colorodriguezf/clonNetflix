@@ -72,6 +72,22 @@ $(".btn-hamb").click(function() {
   $(this).toggleClass("active");
 });
 
+// Menu perfil
+let divContenedor = document.querySelector('.contenedor-img-profile-icon');
+let divMenu = document.querySelector('.menu-desplegable');
+
+divContenedor.addEventListener('mouseover', function () {
+    divMenu.classList.add('open'); //
+});
+
+divMenu.addEventListener('mouseout', function () {  
+    divMenu.classList.remove('open');
+});
+
+
+
+
+
 
 //Nav efecto:
 let header = document.getElementById('header');
