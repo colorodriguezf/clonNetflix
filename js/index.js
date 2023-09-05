@@ -1,71 +1,76 @@
 
-// Menu hamburguesa
- $(".btn-hamb").click(function() {
-        $(this).toggleClass("active");
-    });
+$(document).ready(function(){   
+  $('section .titulo-seccion').css('opacity', '1');
 
     //Antes estaban las 2 sliders juntas, pero como no puedo sacarle las flechas solo al del TOP, tuve que repetir codigo
-$('section #slider').slick({
-  slidesToShow: 6,
-    slidesToScroll: 4,
-    autoplay: false,
-    arrows: false,
-    responsive: [
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          }
-        },
-        {
-            breakpoint: 1000,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,  
-            }
-          },
-          {
-            breakpoint:1400,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 4,
-            }
-          },
-    ]
-  });
-
-$('.sliderSinNumero').slick({
+  $('section #slider').slick({
     slidesToShow: 6,
-    slidesToScroll: 4,
-    autoplay: false,
-    responsive: [
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            arrows: false,
-          }
-        },
-        {
-            breakpoint: 1000,
+      slidesToScroll: 4,
+      autoplay: false,
+      arrows: false,
+      responsive: [
+          {
+            breakpoint: 500,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,  
-              arrows: false,            
+              slidesToShow: 2,
+              slidesToScroll: 2,
             }
           },
           {
-            breakpoint:1400,
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,  
+              }
+            },
+            {
+              breakpoint:1400,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+              }
+            },
+      ]
+    });
+
+  $('.sliderSinNumero').slick({
+      slidesToShow: 6,
+      slidesToScroll: 4,
+      autoplay: false,
+      responsive: [
+          {
+            breakpoint: 500,
             settings: {
-              slidesToShow: 4,
-              slidesToScroll: 4,
-              arrows: true, 
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              arrows: false,
             }
           },
-    ]
-  });
+          {
+              breakpoint: 1000,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,  
+                arrows: false,            
+              }
+            },
+            {
+              breakpoint:1400,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                arrows: true, 
+              }
+            },
+      ]
+    });
+
+});
+
+// Menu hamburguesa
+$(".btn-hamb").click(function() {
+  $(this).toggleClass("active");
+});
 
 
 //Nav efecto:

@@ -315,6 +315,9 @@ display: none;
     margin:0;
     color: #999;
   }
+  .titulo-seccion {
+    opacity: 0;
+  }
 
 
 
