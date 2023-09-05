@@ -102,3 +102,62 @@ document.addEventListener('click', (event) => {
     }
 });
 
+
+// Menu mobile
+
+let navToggle = document.getElementById('nav-toggle');
+let mobileMenu = document.getElementById('mobile-menu');
+let blurBackground = document.getElementById('blur-background');
+let fullPageOverlay = document.getElementById('full-page-overlay');
+
+
+document.body.appendChild(blurBackground);
+document.body.appendChild(fullPageOverlay);
+
+navToggle.addEventListener('click', function () {
+    if (mobileMenu.classList.contains('menu-open')) {
+        mobileMenu.classList.remove('menu-open');
+        blurBackground.style.display = 'none';
+        fullPageOverlay.style.display = 'none';
+    } else {
+        mobileMenu.classList.add('menu-open');
+        blurBackground.style.display = 'block';
+        fullPageOverlay.style.display = 'block';
+    }
+});
+
+blurBackground.addEventListener('click', function () {
+  closeMenu();
+});
+
+fullPageOverlay.addEventListener('click', function () {
+  closeMenu();
+});
+
+function closeMenu() {
+  mobileMenu.classList.remove('menu-open');
+  blurBackground.style.display = 'none';
+  fullPageOverlay.style.display = 'none';
+  $(".btn-hamb").toggleClass("active");
+}
+
+mobileMenu.addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+
+
+// Menu li activo:
+let menuItems = document.querySelectorAll('.mobile-menu ul.links li');
+menuItems[0].classList.add('active');
+menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        menuItems.forEach(function (el) {
+            el.classList.remove('active'); //recorre todos los li y le saca la clase active si alguno la tiene
+        });
+        item.classList.add('active'); //agrego la clase active a el li clickeado
+    });
+});
+
+
+
+
