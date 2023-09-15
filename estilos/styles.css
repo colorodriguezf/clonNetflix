@@ -361,7 +361,7 @@ display: none;
     font-size: 1.2em;
     font-weight: 700;
     margin:0;
-    color: #999;
+    color: #d5d5d5;
   }
   .titulo-seccion {
     opacity: 0;
@@ -743,7 +743,7 @@ nav a:hover {
     position: relative;
     z-index: 1; 
 }
-.contenedor-titulo-seccion h1 {
+.sin .contenedor-titulo-seccion h1 {
     display: table-cell;
     font-size: 1.4vw;
     font-weight: bold;
@@ -821,14 +821,19 @@ display: flex;
 .image-container img {
 width: 100%;
 height: 100%;
-object-fit:cover;
+object-fit:fill;
 }
+.slider .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    }
 
 .sliderSinNumero {
     width: 100%;
     margin: auto;
     padding-left: 4%;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .sliderSinNumero .cont-car {
     margin: 5px;
@@ -948,10 +953,6 @@ footer {
         max-width: 100%;
         overflow: hidden;
       }
-
-      .footer-list li {
-        flex-basis: calc(24% - 10px);
-    }
       
     
 }
