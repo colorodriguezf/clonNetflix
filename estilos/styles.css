@@ -819,15 +819,15 @@ display: flex;
 }
 
 .image-container img {
-width: 100%;
-height: 100%;
-object-fit:fill;
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
 }
 .slider .image-container img {
     width: 100%;
     height: 100%;
     object-fit:fill;
-    }
+}
 
 .sliderSinNumero {
     width: 100%;
